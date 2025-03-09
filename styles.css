@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/********** Home page section Start*/
+.home {
+  background: rgb(239, 65, 45);
+  color: #ededed;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgba(239, 65, 45, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  position: relative;
+  font-size: 25px;
+  color: #ededed;
+  /* Removes the link underline */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Logo appearing from the right animation */
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(239, 65, 45);
+  animation: showRight 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 35px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Makes the navbar Links have a color change animation when hover over with a mouse */
+.navbar a:hover,
+.navbar a.active {
+  color: #081b29;
+}
+
+.home {
+  height: 100vh;
+  /* background: url("myPic.png") color(rgb(239, 65, 45)); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.home-content {
+  max-width: 701px;
+}
+
+/* Yeruslav Krupetsky line */
+.home-content h1 {
+  position: relative;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-content h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(239, 65, 45);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+/* FullStack Developer line */
+.home-content h3 {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: #081b29;
+}
+
+.home-content h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(239, 65, 45);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+/* Between h3 and buttons  */
+.home-content p {
+  position: relative;
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.home-content p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(239, 65, 45);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+/* Hire me and Let's connect background */
+.home-content .btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+
+.home-content .btn-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(239, 65, 45);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.9s;
+  z-index: 2;
+}
+
+/* Hire me and Let's connect buttons */
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 100%;
+  background: #081b29;
+  border: 2px solid #081b29;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ededed;
+  transition: 0.5s;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Hover animation for the Hire me and Let's Connect buttons  */
+/* .btn-box a:hover {
+  color: #081b29;
+  background: transparent;
+  border: 2px solid #ededed;
+} */
+
+/* This Chooses the second button the Let's connect button and only makes it transparent forever */
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #081b29;
+}
+.btn-box a:nth-child(2):hover {
+  background: transparent;
+  color: #ededed;
+}
+
+.btn-box a:nth-child(2)::before {
+  background: #081b29;
+  color: #081b29;
+}
+
+/* Adding a swipe animation to the Hire me and Let's Connect buttons */
+.btn-box a:hover {
+  color: #081b29;
+}
+
+.btn-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ededed;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+
+/* Social media contact links icons */
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(239, 65, 45);
+  animation: showRight 1s ease forwards;
+  animation-delay: 1.9s;
+  z-index: 2;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #081b29;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #081b29;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home-sci a:nth-child(1):hover {
+  transition: 0.5s;
+  color: #0a66c2;
+}
+.home-sci a:nth-child(2):hover {
+  transition: 0.5s;
+  color: #ededed;
+}
+.home-sci a:nth-child(3):hover {
+  transition: 0.5s;
+  color: rgb(216, 41, 41);
+}
+.home-sci a:nth-child(4):hover {
+  transition: 0.5s;
+  color: #ededed;
+}
+
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+/* Social media buttons end */
+
+/* Keyframes animation */
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+/*********** Home Section end */
+/*********** About Section Start*/
+
+.about {
+  margin: 10rem 0px;
+  background: white;
+}
+
+.about-content {
+  flex-direction: column;
+  width: 1020px;
+  max-width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.about-title {
+  color: rgb(239, 65, 45);
+  margin-bottom: 2rem;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 5.1rem;
+  text-align: left;
+}
+
+.about-body {
+  color: #081b29;
+  font-size: 20px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* Project Section Start */
+
+.projects {
+  padding: 50px 20px;
+  background: #f5f5f5;
+}
+
+.projects-title h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.projects-body {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.project-name h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.project-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 41, 59, 0.9);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .project-image img {
+  opacity: 0.5; /* Dim the image slightly */
+}
+
+.project-card:hover .project-details {
+  opacity: 1; /* Fade in details */
+}
+
+.project-details p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.project-details a {
+  color: rgb(239, 65, 45);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-details a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
