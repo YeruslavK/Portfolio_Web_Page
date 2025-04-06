@@ -3,12 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YK Homepage</title>
+
+    <title>YK Portfolio</title>
+    <link
+      rel="icon"
+      href="./assets/images/orange_code_icon.png"
+      type="image/png"
+    />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.ts"></script>
+    <script>
+      window.onbeforeunload = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+    </script>
   </head>
   <body>
     <!-- Logo and nav bot/ Top of the page -->
@@ -26,14 +48,14 @@
     <!-- Home Page into -->
     <section class="home">
       <div class="home-content">
-        <h1>Hi, I'm Yeruslav Krupetsky</h1>
-        <h3>FullStack Developer</h3>
+        <h1>Hi, I'm Yeruslav Krupetsky.</h1>
+        <h3>Full-Stack Developer.</h3>
         <p>
-          Focused on self-learning and product improvement, I will be more than
-          happy to connect.
+          Focused on self-learning and product improvement and AI, I will be
+          more than happy to connect.
         </p>
         <div class="btn-box">
-          <a href="#">Let's Connect</a>
+          <a href="mailto:yeruslavk@gmail.com">Let's Connect</a>
         </div>
       </div>
       <div class="home-sci">
@@ -42,7 +64,12 @@
         ></a>
         <a href="https://github.com/YeruslavK"><i class="bx bxl-github"></i></a>
         <a href="mailto:yeruslavk@gmail.com"><i class="bx bx-envelope"></i></a>
-        <a href="#"><i class="bx bx-file"></i></a>
+
+        <a
+          href="./assets/Yeruslav Krupetsky CV.pdf"
+          download="Yeruslav Krupetsky CV.pdf"
+          ><i class="bx bx-file"></i
+        ></a>
       </div>
       <span class="home-imgHover"></span>
     </section>
@@ -51,31 +78,236 @@
     <section id="projects" class="projects">
       <div class="projects-content">
         <div class="projects-title">
-          <h2>PROJECTS</h2>
+          <h2>MY PROJECTS</h2>
         </div>
         <div class="projects-body">
+          <!-- AR Seat App -->
           <div class="project">
             <div class="project-card">
               <div class="project-image">
-                <img src="/assets/chat_app.jpg" alt="Project 1" />
+                <img
+                  src="./assets/images/Seat_project_pic.JPG"
+                  alt="Project 2"
+                />
                 <div class="project-name">
-                  <h3>Fullstack Chat App</h3>
+                  <h3>Augmanted Reality Application for Seat</h3>
                 </div>
               </div>
               <div class="project-details">
                 <p>
-                  Developed a real-time chat application with secure login and
-                  live user tracking using React.js, Node.js, Zustand,
-                  Socket.IO.
+                  Developed and maintaned an Augmanted Reality (AR) Application
+                  for the monolithic automotive company Seat.
                 </p>
+
+                <ul class="project-tech-stack">
+                  <li>
+                    <img
+                      src="./assets/images/html.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    HTML5
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/css-3.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    CSS3
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/js.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    JavaScript
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/threeJS.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    ThreeJS
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/jquery-icon.webp"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    jQuery
+                  </li>
+                </ul>
                 <a
-                  href="https://fullstack-chat-app-lifa.onrender.com"
+                  href="https://www.seat.co.il/models/ibiza/"
                   target="_blank"
+                  target="_blank"
+                  class="view-project"
                   >View Project</a
                 >
               </div>
             </div>
           </div>
+
+          <div class="project">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="./assets/images/Cupra_pic.JPG" alt="Project 2" />
+                <div class="project-name">
+                  <h3>Augmanted Reality Application for Cupra</h3>
+                </div>
+              </div>
+              <div class="project-details">
+                <p>
+                  Developed and maintaned an Augmanted Reality (AR) Application
+                  for the monolithic automotive company Cupra.
+                </p>
+                <ul class="project-tech-stack">
+                  <li>
+                    <img
+                      src="./assets/images/html.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    HTML5
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/css-3.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    CSS3
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/js.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    JavaScript
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/threeJS.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    ThreeJS
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/jquery-icon.webp"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    jQuery
+                  </li>
+                </ul>
+                <a
+                  href="https://cupraofficial.co.il/cars/cupra-formentor/"
+                  target="_blank"
+                  class="view-project"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/assets/chat_app.jpg" alt="Project 2" />
+                <div class="project-name">
+                  <h3>Chat App</h3>
+                </div>
+              </div>
+              <div class="project-details">
+                <p>
+                  Developed a real-time chat application with secure login and
+                  live user tracking.
+                </p>
+
+                <ul class="project-tech-stack">
+                  <li>
+                    <img
+                      src="./assets/images/html.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    HTML5
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/css-3.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    CSS3
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/react-icon.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    React
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/node.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    NodeJS
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/mongodb.svg"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    MongoDB
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/socket-io-icon-2048x2046-mj0gnm4b.png"
+                      alt="HTML5"
+                      width="24"
+                      height="24"
+                    />
+                    Socket.io
+                  </li>
+                </ul>
+
+                <a
+                  href="https://fullstack-chat-app-lifa.onrender.com"
+                  target="_blank"
+                  class="view-project"
+                  >View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
           <div class="project">
             <div class="project-card">
               <div class="project-image">
@@ -86,10 +318,63 @@
               </div>
               <div class="project-details">
                 <p>
-                  This is a description of Project 2. It showcases its main
-                  features and purpose.
+                  Developed an Application for Text Summaraization using a
+                  hugging face LLM.
                 </p>
-                <a href="https://project2.com" target="_blank">View Project</a>
+                <ul class="project-tech-stack">
+                  <li>
+                    <img
+                      src="./assets/images/next-js-icon.png"
+                      alt="Next"
+                      width="24"
+                      height="24"
+                    />
+                    Next
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/tailewind-css.png"
+                      alt="Tailwind"
+                      width="24"
+                      height="24"
+                    />
+                    Tailwind
+                  </li>
+
+                  <li>
+                    <img
+                      src="./assets/images/typescript.png"
+                      alt="typescript"
+                      width="24"
+                      height="24"
+                    />
+                    TypeScript
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/python-icon.webp"
+                      alt="python"
+                      width="24"
+                      height="24"
+                    />
+                    Python
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/fastapi.svg"
+                      alt="fastapi"
+                      width="24"
+                      height="24"
+                    />
+                    FastAPI
+                  </li>
+                </ul>
+                <a
+                  href="https://github.com/YeruslavK/texto-ai-text-sum"
+                  target="_blank"
+                  class="view-project"
+                  >View Project</a
+                >
               </div>
             </div>
           </div>
@@ -99,6 +384,8 @@
 
     <!-- Projects section end -->
 
+    <!-- Tech Stack section start -->
+
     <!-- About section -->
     <section id="about-me" class="about">
       <div class="about-content">
@@ -106,23 +393,156 @@
           <h2>ABOUT</h2>
         </div>
         <div class="about-body">
-          <p>My name is Yeruslav Krupetsky. I'm a Fullstack Developer.</p>
-          <p>
-            From a very young age, I have always had a love and passion for
-            everything computer-related. Through extensive research and
-            learning, I discovered a similar passion for web development. My
-            goal is to grow as a developer and become the best version of
-            myself. <br />
-            After completing a comprehensive Fullstack course and earning a
-            certification from the Technion Institute, I continued my journey of
-            self-development and learning. I have worked with and explored many
-            new technologies, and I am excited to apply my skills and knowledge
-            to contribute effectively to my future team's success.
-          </p>
+          <div class="span-container">
+            <span>
+              My name is Yeruslav Krupetsky. I'm a Fullstack Developer. <br />
+              From a very young age, I have always had a love and passion for
+              everything computer-related. Through extensive research and
+              learning, I discovered a similar passion for web development. My
+              goal is to grow as a developer and become the best version of
+              myself. <br />
+              After completing a comprehensive Fullstack course and earning a
+              certification from the Technion Institute, I continued my journey
+              of self-development and learning. I have worked with and explored
+              many new technologies, and I am excited to apply my skills and
+              knowledge to contribute effectively to my future team's success.
+            </span>
+            <br />
+            <div class="about-extra">
+              <h4 class="tech-section-title">Hobbies:</h4>
+              <ul class="about-hobbies-list">
+                <li>Self-improvment 🎯</li>
+                <li>Reading 📖</li>
+                <li>Video Games 👾</li>
+                <li>Gym 💪🏼</li>
+              </ul>
+              <h4 class="tech-section-title">Languages:</h4>
+              <ul class="about-hobbies-list">
+                <li>Hebrew</li>
+                <li>English</li>
+                <li>Russian</li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <div class="tech-stack-content">
+                <div class="tech-stack-title">
+                  <h2>TECH STACK</h2>
+                </div>
+                <div class="tech-stack-grid">
+                  <h4 class="tech-section-title">Frontend</h4>
+                  <div class="tech-section">
+                    <div class="tech-item">
+                      <img src="./assets/images/html.png" alt="HTML5" />
+                      <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="./assets/images/css-3.png" alt="CSS3" />
+                      <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                      <img
+                        src="./assets/images/tailewind-css.png"
+                        alt="Tailwind"
+                      />
+                      <span>Tailwind</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="./assets/images/js.png" alt="Javascript" />
+                      <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                      <img
+                        src="./assets/images/typescript.png"
+                        alt="TypeScript"
+                      />
+                      <span>TypeScript</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="./assets/images/react-icon.png" alt="React" />
+                      <span>React</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="./assets/images/next-js-icon.png" alt="next" />
+                      <span>Next</span>
+                    </div>
+                  </div>
+
+                  <h4 class="tech-section-title">Backend</h4>
+                  <div class="tech-section">
+                    <div class="tech-item">
+                      <img src="./assets/images/node.png" alt="NodeJS" />
+                      <span>NodeJS</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="./assets/images/mongodb.svg" alt="MongoDB" />
+                      <span>MongoDB</span>
+                    </div>
+                    <div class="tech-item">
+                      <img
+                        src="./assets/images/express-icon.png"
+                        alt="Express"
+                      />
+                      <span>Express</span>
+                    </div>
+                    <div class="tech-item">
+                      <img
+                        src="./assets/images/mongoose-icon.png"
+                        alt="Mongoose"
+                      />
+                      <span>Mongoose</span>
+                    </div>
+                    <div class="tech-item">
+                      <img
+                        src="./assets/images/python-icon.webp"
+                        alt="Python"
+                      />
+                      <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="./assets/images/fastapi.svg" alt="FastAPI" />
+                      <span>FastAPI</span>
+                    </div>
+                    <div class="tech-item">
+                      <img
+                        src="./assets/images/socket-io-icon-2048x2046-mj0gnm4b.png"
+                        alt="Socket.io"
+                      />
+                      <span>Socket.io</span>
+                    </div>
+                  </div>
+                  <h4 class="tech-section-title">Utilities</h4>
+                  <div class="tech-section">
+                    <div class="tech-item">
+                      <img src="./assets/images/git-icon.png" alt="Git" />
+                      <span>Git</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="./assets/images/Github-icon.png" alt="Github" />
+                      <span>GitHub</span>
+                    </div>
+                    <div class="tech-item">
+                      <img
+                        src="./assets/images/Postman-icon.webp"
+                        alt="Postman"
+                      />
+                      <span>Postman</span>
+                    </div>
+                    <div class="tech-item">
+                      <img src="./assets/images/vscode-icon.png" alt="VSCode" />
+                      <span>VS Code</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="./assets//images/head_pic.jpg" alt="" class="head-pic" />
         </div>
       </div>
     </section>
 
+    <!-- Tech stack section -->
     <script src="script.ts"></script>
   </body>
 </html>

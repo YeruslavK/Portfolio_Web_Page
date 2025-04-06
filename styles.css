@@ -2,9 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  font-family: "Oswald", sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 /********** Home page section Start*/
@@ -31,13 +34,15 @@
   position: relative;
   font-size: 25px;
   color: #ededed;
-  /* Removes the link underline */
   text-decoration: none;
   font-weight: 600;
+  opacity: 0;
+  animation: slideIn 0.5s ease forwards;
+  animation-delay: 0.1s; /* Appears first before navbar items */
 }
 
 /* Logo appearing from the right animation */
-.logo::before {
+/* .logo::before {
   content: "";
   position: absolute;
   top: 0;
@@ -47,15 +52,44 @@
   background: rgb(239, 65, 45);
   animation: showRight 1s ease forwards;
   animation-delay: 0.4s;
-}
+} */
 
 .navbar a {
+  position: relative;
   font-size: 18px;
   color: #ededed;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   margin-left: 35px;
-  transition: color 0.3s ease-in-out;
+  opacity: 0;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.navbar a:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.navbar a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.navbar a:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.navbar a:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Makes the navbar Links have a color change animation when hover over with a mouse */
@@ -75,7 +109,7 @@
 }
 
 .home-content {
-  max-width: 701px;
+  max-width: 718px;
 }
 
 /* Yeruslav Krupetsky line */
@@ -179,13 +213,6 @@
   z-index: 1;
   overflow: hidden;
 }
-
-/* Hover animation for the Hire me and Let's Connect buttons  */
-/* .btn-box a:hover {
-  color: #081b29;
-  background: transparent;
-  border: 2px solid #ededed;
-} */
 
 /* This Chooses the second button the Let's connect button and only makes it transparent forever */
 .btn-box a:nth-child(2) {
@@ -303,38 +330,112 @@
     width: 0;
   }
 }
-/*********** Home Section end */
-/*********** About Section Start*/
+
+/*Home Section end */
+/* About Section Start*/
 
 .about {
-  margin: 10rem 0px;
-  background: white;
+  padding: 80px 0;
+  background: linear-gradient(to bottom, #f8f9fa, #fff);
 }
 
 .about-content {
-  flex-direction: column;
-  width: 1020px;
-  max-width: 100%;
-  padding-left: 100px;
-  padding-right: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  animation: fadeIn 0.8s ease-out;
 }
 
-.about-title {
+.about-title h2 {
   color: rgb(239, 65, 45);
-  margin-bottom: 2rem;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 5.1rem;
-  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.about-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: rgb(239, 65, 45);
+  border-radius: 2px;
 }
 
 .about-body {
-  color: #081b29;
-  font-size: 20px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.span-container {
+  flex: 2; /* Increased from 1 to take more space */
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.span-container:hover {
+  transform: translateY(-5px);
+}
+
+.head-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-body span {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about-extra {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.about-hobbies-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.about-hobbies-list li {
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.about-hobbies-list li:hover {
+  background: #f1f3f5;
+  transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Project Section Start */
@@ -352,8 +453,11 @@
 
 .projects-body {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  max-width: 1839px;
+  margin: 0 auto;
 }
 
 .project-card {
@@ -377,6 +481,161 @@
   height: 100%;
   object-fit: cover;
   transition: opacity 0.3s ease-in-out;
+}
+
+.project-details span {
+  display: block;
+  margin-top: 40px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Uniform spacing between all elements */
+  padding: 20px;
+}
+
+.project-details p,
+.project-details h4,
+.project-details .project-tech-stack,
+.project-details a {
+  margin: 0; /* Reset default margins */
+}
+
+.project-details .view-project {
+  display: inline-block;
+}
+
+.project-details .view-project {
+  margin-top: 20px; /* Add space above button */
+  display: inline-block; /* Maintain proper button layout */
+}
+
+.view-project {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  justify-content: center;
+  width: 200px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  background-color: #a3381e80;
+  border-color: #e44d26;
+  cursor: pointer;
+}
+
+.project-tech-stack {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 35px;
+}
+
+.project-tech-stack li {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.project-tech-stack li img {
+  width: 20px;
+  height: 20px;
+}
+
+.project-tech-stack li:hover {
+  transform: translateY(-2px);
+}
+
+/* Specific tech hover styles */
+.project-tech-stack li:has(img[alt="HTML5"]) {
+  background-color: #e44d2680;
+  border-color: #e44d26;
+  cursor: pointer;
+}
+
+.project-tech-stack li:has(img[src*="css"]) {
+  background-color: #264de480;
+  border-color: #264de4;
+  cursor: pointer;
+}
+.project-tech-stack li:has(img[src*="Tailwind"]) {
+  background-color: #06b6d480;
+  border-color: #06b6d4;
+  cursor: pointer;
+}
+
+.project-tech-stack li:has(img[src*="react"]) {
+  background-color: #61dafb80;
+  border-color: #61dafb;
+  cursor: pointer;
+}
+
+.project-tech-stack li:has(img[src*="node"]) {
+  background-color: #68a06380;
+  border-color: #68a063;
+  cursor: pointer;
+}
+
+.project-tech-stack li:has(img[src*="socket"]) {
+  background-color: #00000080;
+  border-color: #000000;
+  cursor: pointer;
+}
+
+.project-tech-stack li:has(img[src*="three"]) {
+  background-color: #18181880;
+  border-color: #18181880;
+  cursor: pointer;
+}
+
+.project-tech-stack li:has(img[src*="js"]) {
+  background-color: #f7df1e80;
+  border-color: #f7df1e;
+  cursor: pointer;
+}
+
+.project-tech-stack li:has(img[src*="typescript"]) {
+  background-color: #007acc80;
+  border-color: #007acc;
+  cursor: pointer;
+}
+
+.project-tech-stack li:has(img[src*="jquery"]) {
+  background-color: #0769ad80;
+  border-color: #0769ad;
+  cursor: pointer;
+}
+.project-tech-stack li:has(img[src*="mongodb"]) {
+  background-color: #47a24880;
+  border-color: #47a248;
+  cursor: pointer;
+}
+.project-tech-stack li:has(img[src*="next"]) {
+  background-color: #1a1a1a80;
+  border-color: #1a1a1a;
+  cursor: pointer;
+}
+.project-tech-stack li:has(img[src*="python"]) {
+  background-color: #366b9880;
+  border-color: #366b98;
+  cursor: pointer;
+}
+.project-tech-stack li:has(img[src*="fastapi"]) {
+  background-color: #05998b80;
+  border-color: #05998b;
+  cursor: pointer;
 }
 
 .project-name {
@@ -414,11 +673,11 @@
 }
 
 .project-card:hover .project-image img {
-  opacity: 0.5; /* Dim the image slightly */
+  opacity: 0.5;
 }
 
 .project-card:hover .project-details {
-  opacity: 1; /* Fade in details */
+  opacity: 1;
 }
 
 .project-details p {
@@ -436,4 +695,169 @@
 .project-details a:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+.tech-stack {
+  width: 85%;
+  padding: 100px 0;
+}
+
+.tech-stack-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tech-stack-title {
+  color: rgb(239, 65, 45);
+  margin-bottom: 2rem;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.tech-stack-title h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.tech-stack-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.tech-section-title {
+  color: rgb(239, 65, 45);
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.tech-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  gap: 8px;
+  justify-content: start;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  width: 80px;
+  border: 2px solid;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+.tech-item img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.tech-item span {
+  font-size: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+.tech-item:has(img[alt="HTML5"]) {
+  background-color: #e44d2680;
+  border-color: #e44d26;
+}
+
+.tech-item:has(img[src*="css"]) {
+  background-color: #264de480;
+  border-color: #264de4;
+}
+
+.tech-item:has(img[alt="Tailwind"]) {
+  background-color: #06b6d480;
+  border-color: #06b6d4;
+}
+
+.tech-item:has(img[src*="js"]) {
+  background-color: #f7df1e80;
+  border-color: #f7df1e;
+}
+.tech-item:has(img[src*="typescript"]) {
+  background-color: #007acc80;
+  border-color: #007acc;
+}
+.tech-item:has(img[src*="react"]) {
+  background-color: #61dafb80;
+  border-color: #61dafb;
+}
+.tech-item:has(img[src*="next"]) {
+  background-color: #1a1a1a80;
+  border-color: #1a1a1a;
+}
+
+.tech-item:has(img[src*="node"]) {
+  background-color: #68a06380;
+  border-color: #68a063;
+}
+
+.tech-item:has(img[src*="socket"]) {
+  background-color: #00000080;
+  border-color: #000000;
+}
+
+.tech-item:has(img[src*="three"]) {
+  background-color: #18181880;
+  border-color: #18181880;
+}
+
+.tech-item:has(img[alt="MongoDB"]) {
+  background-color: #47a24880;
+  border-color: #47a248;
+}
+
+.tech-item:has(img[alt="Python"]) {
+  background-color: #366b9880;
+  border-color: #366b98;
+}
+
+.tech-item:has(img[alt="FastAPI"]) {
+  background-color: #05998b80;
+  border-color: #05998b;
+}
+
+.tech-item:has(img[alt="Express"]) {
+  background-color: #00000080;
+  border-color: #000000;
+}
+
+.tech-item:has(img[alt="Mongoose"]) {
+  background-color: #88001b80;
+  border-color: #88001b;
+}
+
+.tech-item:has(img[alt="Git"]) {
+  background-color: #f1502f80;
+  border-color: #f1502f;
+}
+
+.tech-item:has(img[alt="GitHub"]) {
+  background-color: #24292e80;
+  border-color: #24292e;
+}
+
+.tech-item:has(img[alt="Postman"]) {
+  background-color: #ff6c3780;
+  border-color: #ff6c37;
+}
+
+.tech-item:has(img[alt="VSCode"]) {
+  background-color: #007acc80;
+  border-color: #007acc;
 }

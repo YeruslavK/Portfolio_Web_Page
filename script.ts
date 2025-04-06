@@ -1,4 +1,4 @@
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", (): void => {
   const headerLinks = document.querySelectorAll<HTMLAnchorElement>(".navbar a");
   const projectsSection = document.querySelector<HTMLElement>(".projects");
   const header = document.querySelector<HTMLElement>(".header");
@@ -16,3 +16,14 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+window.onload = (): void => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
