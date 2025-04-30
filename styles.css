@@ -911,6 +911,10 @@
     justify-content: center;
   }
 
+  .home-content {
+    margin-bottom: 5%;
+  }
+
   .home-content h1 {
     font-size: 36px;
   }
