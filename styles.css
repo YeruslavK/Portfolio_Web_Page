@@ -38,7 +38,7 @@
   font-weight: 600;
   opacity: 0;
   animation: slideIn 0.5s ease forwards;
-  animation-delay: 0.1s; /* Appears first before navbar items */
+  animation-delay: 0.1s;
 }
 
 /* Logo appearing from the right animation */
@@ -614,6 +614,11 @@
 .project-tech-stack li:has(img[src*="next"]) {
   background-color: #1a1a1a80;
   border-color: #1a1a1a;
+  cursor: pointer;
+}
+.project-tech-stack li:has(img[src*="openai"]) {
+  background-color: #e2e2e2e3;
+  border-color: #e2e2e2e3;
   cursor: pointer;
 }
 .project-tech-stack li:has(img[src*="python"]) {
