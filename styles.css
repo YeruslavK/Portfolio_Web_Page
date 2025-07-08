@@ -1161,3 +1161,93 @@ body {
     gap: 1rem;
   }
 }
+
+/* Slick Tech Stack Section */
+.tech-stack-grid-slick {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .tech-stack-grid-slick {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.tech-category-card {
+  background: rgba(30, 41, 59, 0.85);
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-section-slick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  justify-content: center;
+}
+
+.tech-item-slick {
+  width: 78px;
+  height: 78px;
+  background: rgba(59, 130, 246, 0.08);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.tech-item-slick:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px rgba(34, 211, 238, 0.18);
+}
+.tech-item-slick img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+.tech-item-slick span {
+  font-size: 13px;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.tech-category-icon {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .tech-stack-grid-slick {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .tech-category-card {
+    padding: 1.2rem 0.5rem;
+  }
+  .tech-item-slick {
+    width: 60px;
+    height: 60px;
+  }
+  .tech-item-slick img {
+    width: 26px;
+    height: 26px;
+  }
+  .tech-item-slick span {
+    font-size: 11px;
+  }
+}
